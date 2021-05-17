@@ -48,7 +48,7 @@ This was the ground work to get us started on the audit and find the following i
 
 	Still in the same "for" loop, we had the script check if the county associated with each individual vote was already present in the list or add it to the list if it was not before initializing the county's vote tally at 0.
 	Next, each occurrence of the county in the data would add one vote to its vote tally. 
-
+	COUNTY VOTES
 	
 	In order to output this information to a text file along with calculating each county's percentage share of the total vote count, we used the following f-string:  
 	  
@@ -86,7 +86,7 @@ This was the ground work to get us started on the audit and find the following i
 ## Election Audit Summary
 
 
-As demonstrated while going over our method, this script is pretty easy to use and even creates a text file to output a summary of the data from our analysis. The file in question can be found HERE or in the "Analysis" folder and is named election_results
+As demonstrated while going over our method, this script is pretty easy to use and even creates a text file to output a summary of the data from our analysis. The file in question can be found in the "Analysis" folder and is named election_results
 
 It would be extremely easy to re-write this script by modifying the file it will open in order to analyze the vote data of another district. All that would be needed is to create a folder with a similar structure containing the script along with an "Analysis" subfolder and a "Resources" subfolder containing the dataset of interest.
 

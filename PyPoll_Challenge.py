@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-"""PyPoll Homework Challenge Solution."""
-
 # Add our dependencies.
 import csv
 import os
@@ -29,8 +26,8 @@ winning_count = 0
 winning_percentage = 0
 
 # 2: Track the largest county and county voter turnout.
-largest_county = ""
-largest_turnout = 0
+largest_turnout = ""
+county_turnout = 0
 
 
 # Read the csv and convert it into a list of dictionaries
@@ -111,15 +108,15 @@ with open(file_to_save, "w") as txt_file:
         txt_file.write(county_results)
 
          # 6f: Write an if statement to determine the winning county and get its vote count.
-        if (ctvotes > largest_turnout) :
-            largest_turnout = ctvotes
-            largest_county = county_name
+        if (ctvotes > county_turnout) :
+            county_turnout = ctvotes
+            largest_turnout = county_name
             
 
     # 7: Print the county with the largest turnout to the terminal.
     county_turnout_summary = (
         f"\n------------------------------\n"
-        f"Largest County Turnout: {largest_county}\n"
+        f"Largest County Turnout: {largest_turnout}\n"
         f"------------------------------\n\n")
     print(county_turnout_summary)
 
