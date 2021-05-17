@@ -24,12 +24,14 @@ In addition to the script itself, we were also required to provide a written ana
 
 ## Election Audit Results
 
-Using a bulleted list, address the following election outcomes. Use images or examples of your code as support where necessary.
-
 The very first step of the audit was to import the data to be used in the script and then to create an output text file to be populated with the results.
 
+![Import_Export_PyPoll](https://user-images.githubusercontent.com/76575162/118425241-64578280-b68e-11eb-9265-edf8ed3f9601.png)
 
 Next we established variables to hold key values before running through the data and turning it into an easily usable list of dictionaries. We then prompted the script to open the database.
+
+![Variables_PyPoll](https://user-images.githubusercontent.com/76575162/118425301-85b86e80-b68e-11eb-8830-da8cd958cf7a.png)
+![Openfile_PyPoll](https://user-images.githubusercontent.com/76575162/118425352-a7b1f100-b68e-11eb-9d89-bba0aae98824.png)
 
 
 This was the ground work to get us started on the audit and find the following information
@@ -39,7 +41,12 @@ This was the ground work to get us started on the audit and find the following i
 
 	In order to count all the votes, a simple "for" loop was created to run through all the data in the csv file and to add a vote to the total_votes variable for each new row in the file.
 	
-	This resulted in a total vote count of 369,711 which we output to the text file by printing an f-string as follows:
+![total_vote_count](https://user-images.githubusercontent.com/76575162/118425438-d4660880-b68e-11eb-99f5-fca72dc33620.png)
+
+This resulted in a total vote count of 369,711 which we output to the text file by printing an f-string as follows:
+
+	
+![write_total_vote_count](https://user-images.githubusercontent.com/76575162/118425538-fe1f2f80-b68e-11eb-947c-eba3d44247c3.png)
 
 
 
@@ -48,27 +55,41 @@ This was the ground work to get us started on the audit and find the following i
 
 	Still in the same "for" loop, we had the script check if the county associated with each individual vote was already present in the list or add it to the list if it was not before initializing the county's vote tally at 0.
 	Next, each occurrence of the county in the data would add one vote to its vote tally. 
+	
+![county_votes_tally](https://user-images.githubusercontent.com/76575162/118425597-1ee78500-b68f-11eb-8243-f590d19728bb.png)
 
 	
-	In order to output this information to a text file along with calculating each county's percentage share of the total vote count, we used the following f-string:  
+In order to output this information to a text file along with calculating each county's percentage share of the total vote count, we used the following f-string: 
+
+![write_county_votes](https://user-images.githubusercontent.com/76575162/118425929-d7adc400-b68f-11eb-872b-607bb55fd882.png)
+
 	  
-	 This showed that the results for each county were:
-	- 	Jefferson: 10.5% (38,855)
-	- 	Denver: 82.8% (306,055)
-	- 	Arapahoe: 6.7% (24,801)
+This showed that the results for each county were:
+	- Jefferson: 10.5% (38,855)
+	- Denver: 82.8% (306,055)
+	- Arapahoe: 6.7% (24,801)
 
 * ### Which county had the largest number of votes?
 
 	As seen in the above breakdown, Denver was the county with the most votes with a total of 306,055 or 82.8% of the total votes. 
 	
 	In order to automatically determine the largest county turnout we used a "for" loop to retrieve the county votes data and calculating the  before adding an "if" statement to determine which county had the highest turnout. We then used an f-string to output it to the text file.
+	
+	![write_county_turnout](https://user-images.githubusercontent.com/76575162/118425986-fe6bfa80-b68f-11eb-9daa-789152648626.png)
+
 
 * ### Breakdown of the number of votes and the percentage of the total votes each candidate received.
 
 	After focusing on counties, we moved on to the individual candidates and the votes they received. Just like for the counties, we had the script check if the candidate associated with each individual vote was already present in the list or add it to the list if it was not before initializing the candidate's vote tally at 0.
 	Next, each occurrence of the candidate in the data would add one vote to its vote tally.
 	
+	![candidate_vote_count](https://user-images.githubusercontent.com/76575162/118426082-24919a80-b690-11eb-8b8b-4e470c662117.png)
+
+	
 	In order to output this information to a text file along with calculating each candidate's percentage share of the total vote count, we used the following f-string:
+	
+	![candidate_summary](https://user-images.githubusercontent.com/76575162/118426132-468b1d00-b690-11eb-9300-91db78972190.png)
+
 	
 	This showed that the results for each candidate were:
 	- Charles Casper Stockham: 23.0% (85,213)
@@ -80,6 +101,9 @@ This was the ground work to get us started on the audit and find the following i
 	As seen in the above breakdown, Diana DeGette was the winning candidate with a total of 272,892 votes or 73.8% of the total votes. 
 
 	In order to automatically determine the winning candidate we used a "for" loop to retrieve the county votes data and calculating the  before adding an "if" statement to determine which county had the highest turnout. We then used an f-string to output it to the text file.
+	
+	![winning_candidate_summary](https://user-images.githubusercontent.com/76575162/118426254-82be7d80-b690-11eb-9087-75fcb9259722.png)
+
 
 
 
