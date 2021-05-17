@@ -111,7 +111,7 @@ This showed that the results for each county were:
 ## Election Audit Summary
 
 
-As demonstrated while going over our method, this script is pretty easy to use and even creates a text file to output a summary of the data from our analysis. The file in question can be found HERE or in the "Analysis" folder and is named election_results
+As demonstrated while going over our method, this script is pretty easy to use and even creates a text file to output a summary of the data from our analysis. The file in question can be found [HERE](https://github.com/MuzX9p088KKe/Module-3-Challenge/blob/main/Analysis/election_results.txt) or in the "Analysis" folder and is named election_results
 
 It would be extremely easy to re-write this script by modifying the file it will open in order to analyze the vote data of another district. All that would be needed is to create a folder with a similar structure containing the script along with an "Analysis" subfolder and a "Resources" subfolder containing the dataset of interest.
 
