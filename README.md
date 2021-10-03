@@ -1,4 +1,4 @@
-# Module 3 Challenge: Election Analysis
+#Election Analysis
 
 ## Overview of Election Audit
 
